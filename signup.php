@@ -33,18 +33,18 @@ if ($checkResult->num_rows > 0) {
   $insertQuery = "INSERT INTO users (firstname, lastname, gender, phone, email, password) VALUES ('$firstname', '$lastname', '$gender', '$phone', '$email', '$password')";
   
   if ($conn->query($insertQuery) === TRUE) {
-    // User registration successful
+    
     echo "Registration successful";
     
-    // Redirect to sign-in page after successful registration
+    // Redirect to home page after successful registration
     header("Location: up2.html");
     exit();
   } else {
-    // Error occurred while inserting data
+  
     echo "Error: " . $conn->error;
   }
 }
 
-// Close the database connection
+
 $conn->close();
 ?>
