@@ -22,10 +22,10 @@ $sql = "SELECT * FROM users WHERE (email='$login' OR phone='$login') AND passwor
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  // User login successful
+ 
   echo "Login successful";
 } else {
-  // User login failed
+  
   echo "Invalid login credentials";
 }
 
